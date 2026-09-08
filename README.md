@@ -113,4 +113,7 @@ Once the interface ring parameters are forced to maxima and hardware interrupts 
 ------------------------------------------------------------------------------
  [CORE 2 STATUS MATRIX]: POLLING FORCED | INTERRUPT TIMERS DECOUPLED (0 µs)
  [RESULT LOG]: Matrix Jitter fully suppressed. Phase accumulation delta = 0.
-==============================================================================
+## 📊 Expected Runtime Diagnostics
+
+When independent operators activate verification loops over isolated hardware layers, the diagnostic engine maps local data paths and tracks microsecond latency offsets. Please refer to the implementation details for the complete terminal diagnostics block structure.
+
