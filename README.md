@@ -96,9 +96,9 @@ Once the interface ring parameters are forced to maxima and hardware interrupts 
   ```bash
   sudo taskset -c 2 ./smp-ping.sh 192.168.1.50 eth0
   ```
-==============================================================================
+
  #HANSONLATTICE // DETERMINISTIC COMPUTING ENGINE // NODE ZERO DIAGNOSTICS
-==============================================================================
+
  [SYSTEM STATE]: UP & LOCKED              [KERNEL CORE ISOLATION]: ACTIVE (2-15)
  [MESH TARGET]:  192.168.1.50             [HARDWARE INTERFACE]:   eth0
  [THERMAL STATE]: IMMERSION STABLE        [CLOCK SYNC MATRIX]:    ZERO-DRIFT
