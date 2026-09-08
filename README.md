@@ -19,8 +19,10 @@ This software and its architectural specifications are licensed under the **GNU 
 ### 1. The Hanson-Nyquist Bound (Spatial Decay)
 The classical Nyquist-Shannon Sampling Theorem fails to calculate spatial data decay across multi-dimensional coordinate fields when processed through floating virtual server grids. We define the Bound to fix Spherical Aliasing as:
 
-`lim (Δt → 0) ∮ [E_decay(θ, φ) - Ψ_jitter(t)] dΩ = δ_structural`
-
+$$
+\lim_{\Delta t \to 0} \oint_{\Omega} \left[ E_{\text{decay}}(\theta, \varphi) - \Psi_{\text{jitter}}(t) \right] \, d\Omega = \delta_{\text{structural}}
+$$
+*The Bound: $T_{drift} \geq \frac{D}{c}$. At planetary scale this converges to ≈ 17 minutes of spherical error.*
 * **Operational Impact**: Eliminates the 54% performance leak in cloud-hosted CAD engines and resolves the systemic 72cm geodetic mapping error.
 
 ### 2. The Deterministic Hardware Kernel Law
