@@ -97,22 +97,6 @@ Once the interface ring parameters are forced to maxima and hardware interrupts 
   sudo taskset -c 2 ./smp-ping.sh 192.168.1.50 eth0
   ```
 
- #HANSONLATTICE // DETERMINISTIC COMPUTING ENGINE // NODE ZERO DIAGNOSTICS
-
- [SYSTEM STATE]: UP & LOCKED              [KERNEL CORE ISOLATION]: ACTIVE (2-15)
- [MESH TARGET]:  192.168.1.50             [HARDWARE INTERFACE]:   eth0
- [THERMAL STATE]: IMMERSION STABLE        [CLOCK SYNC MATRIX]:    ZERO-DRIFT
-------------------------------------------------------------------------------
- TIMESTAMP (NS)        HW DELTA (ns)   SHIFT VALUE (µs)    RTT STATUS
-------------------------------------------------------------------------------
- 1788943210344556112   +112 ns         0.112 µs            0.312 ms  [ALIGNED]
- 1788943211344559844   -84 ns         -0.084 µs            0.298 ms  [ALIGNED]
- 1788943212344554321   +45 ns          0.045 µs            0.301 ms  [ALIGNED]
- 1788943213344556701   -12 ns         -0.012 µs            0.294 ms  [ALIGNED]
- 1788943214344551198   +3 ns           0.003 µs            0.295 ms  [ALIGNED]
-------------------------------------------------------------------------------
- [CORE 2 STATUS MATRIX]: POLLING FORCED | INTERRUPT TIMERS DECOUPLED (0 µs)
- [RESULT LOG]: Matrix Jitter fully suppressed. Phase accumulation delta = 0.
 ## 📊 Expected Runtime Diagnostics
 
 When independent operators activate verification loops over isolated hardware layers, the diagnostic engine maps local data paths and tracks microsecond latency offsets. Please refer to the implementation details for the complete terminal diagnostics block structure.
