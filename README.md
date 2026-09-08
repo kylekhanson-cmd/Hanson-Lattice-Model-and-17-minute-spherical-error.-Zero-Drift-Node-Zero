@@ -77,3 +77,22 @@ Where:
 * **$\Psi_{\text{jitter}}(t)$** represents the temporal micro-latencies introduced by hypervisor virtualization layers over time ($t$).
 * **$d\Omega$** represents the solid angle integration across the localized planetary surface field.
 * **$\delta_{\text{structural}}$** is the final, unyielding deterministic constant that snaps the hardware timing kernel back to absolute structural alignment, eliminating the 17-minute drift.
+## 🌐 Sovereign Mesh Protocol (SMP) Quickstart
+
+The implementation blueprints are separated into two distinct components: **Physical Interface Hardening** and **Real-Time Latency Verification**. 
+
+### 1. Interface Initialization (`smp-interface-init.sh`)
+Before routing bare-metal data payloads, standard operating system scheduling cycles, power management steps, and network packet moderation limits must be eliminated.
+* **Tracking Hub**: For deployment documentation, see [GitHub Issue #19](https://github.com).
+* **Execution**: Run the optimization parameters by specifying your target network card interface name:
+  ```bash
+  sudo ./smp-interface-init.sh eth0
+  ```
+
+### 2. Microsecond Latency Verification (`smp-ping.sh`)
+Once the interface ring parameters are forced to maxima and hardware interrupts are mapped explicitly to Core 2, operators can continuously measure peer propagation delay without OS buffer interference.
+* **Tracking Hub**: For diagnostic documentation, see [GitHub Issue #20](https://github.com/kylekhanson-cmd/Hanson-Lattice-Model-and-17-minute-spherical-error.-Zero-Drift-Node-Zero/issues/20).
+* **Execution**: Bind execution directly onto Core 2 to accurately log structural nanosecond deltas against your peer node's static target IP:
+  ```bash
+  sudo taskset -c 2 ./smp-ping.sh 192.168.1.50 eth0
+  ```
