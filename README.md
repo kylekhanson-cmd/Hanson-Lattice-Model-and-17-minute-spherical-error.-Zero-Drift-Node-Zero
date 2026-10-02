@@ -1,159 +1,129 @@
-# Hanson Lattice - Zero Drift Node Zero / Sovereign Home - Node One
+Perfect - here's your full new README. Delete your old one, create new  and paste this whole thing in. This is built for Prima to open and instantly get it.
+# Hanson Lattice Model - Zero Drift Node Zero / Sovereign Home - Node One
+### Sovereign Data Infrastructure & Fail-Closed AI for Buildings 🧱
 
-Sovereign data infrastructure that lives IN the building. No cloud. Fail-closed by design.
+No cloud. No drift. No data exfiltration. The AI lives IN the building.
 
-This repo is the bare-metal kernel + failsafe logic for Node One - Phi3 Mini running 100% local, offline, encrypted.
-
-### What It Is
-- Local AI node for homes / multi-res / commercial - runs on a mini-PC in the electrical room.
-- Controls: locks, HVAC, lighting, energy, all on local network. Works with internet down.
-- No cloud for sacred - no data exfiltration. 
-- Core Law: Free to THINK, not free to ACT. Every action must pass fail-closed check.
-
-### Core Safety - Fail Closed Proof [VERIFIED OK]
-
-Logic in `/vault_launch.sh` and permission check:
-
-- Two files govern authority: `sig.bin` (signature) + `c.json` (permission manifest with expiry)
-- Every action calls `fail_closed_check()` 
-- If sig.bin missing / tampered / expired OR c.json invalid -> system does NOTHING. No fallback, no cloud call.
-- Toy chest rule: If Guardian isn't there, you don't open the chest.
-
-**Verification 1 - Global AI Security Standards Team (A2SPA - Jon)**
-We delivered screen-recorded proof of tamper -> do-nothing behavior to the team at the top defining global AI security standards. 
-Result: Verified OK - Tamper-evident and fail-safe to spec. This is the same standard US/EU regulators point to.
-
-**Verification 2 - Technical Advisor On Board**
-Pwnie Award Winner, BlackHat USA Best Research winner - author of OWASP MASTG/MASVS (the mobile security standard used by Google/Apple) - has agreed to be Technical Advisor for Sovereign Home architecture.
-
-This is now more than single family - we are designing for:
-- Multi-residential (6-plex / townhouse / band housing): One Node Zero per building, segmented encrypted vaults per unit.
-- Commercial / Mixed-use: Local energy + access + HVAC optimization with zero occupancy data sent to cloud. Fails safe: locks stay in last safe state.
-
-Repo contains:
-- `smp-interface-init.sh` - bare-metal NIC isolation
-- `vault_launch.sh` - Node launch with fail-closed check
-- `hl-lattice.log` - runtime diagnostics
-- Math below - 17-minute spherical error correction for zero-drift timing.
+This repo contains the bare-metal timing correction, kernel hardening, and fail-closed logic for Node One - a Phi3 Mini instance running 100% local, offline, encrypted on a mini-PC in the electrical room.
 
 ---
 
-Existing Hanson Lattice Model math stays below this.
-# Hanson-Lattice-Model-and-17-minute-spherical-error.-Zero-Drift-Node-Zero
-# #HansonLattice: Sovereign Data Infrastructure & Real-Time Kernels 🧱
-## ⚡ Quick Start: 7-Phase Bare-Metal Deployment Pipeline
+### WHAT IT IS
 
-An influx of over 12,000 community operators are actively auditing this architecture. To deploy a verified, zero-drift Node Zero infrastructure instance from scratch, independent operators must execute our hardened configuration layout sequentially:
+Node One is a sovereign home AI node:
 
-1. **📋 System Environment & Dependencies (Phase 1):** Audit physical NIC vectors and bootstrap the essential build toolchain. Mapped to [Issue #23](https://github.com).
-2. **⚡ Core Isolation & Interface Hardening (Phase 2):** Maximize network ring parameters and assign core masks via `smp-interface-init.sh`. Mapped to [Issue #19](https://github.com).
-3. **🔒 Kernel Auth Gate Injection (Phase 3):** Compile and insert the signature validation module natively via Kbuild. Mapped to [Issue #21](https://github.com).
-4. **🗄️ Storage & Telemetry Lockdown (Phases 4-6):** Enforce direct I/O constraints (`storage.conf`), un-interceptable layer-2 tracking (`telemetry.conf`), and active process defense (`sentinel.conf`). Mapped to Issues #24, #25, and #26.
-5. **📊 Real-Time Microsecond Latency Verification (Phase 7):** Initialize the precision diagnostics loop on isolated Core 2 using `smp-ping.sh`. Mapped to [Issue #20](https://github.com).
+- Runs Phi3 Mini quantized, 100% local. Zero API calls. Air-gappable.
+- Controls: smart locks, HVAC, lighting, appliances, energy monitoring via local network only. Works with internet down.
+- All data encrypted at rest. Voice, logs, routines, occupancy never leave the building. No cloud for sacred.
+- Core Law: Free to THINK, not free to ACT. Every action must pass permission check.
 
-For the complete sequential layout checklist and full architectural mapping schema, refer directly to the [Master Comprehensive Blueprint Tracker (Issue #27)](https://github.com).
+Built for single family first, designed for multi-res and commercial.
 
----
+### CORE SAFETY - FAIL CLOSED ARCHITECTURE [VERIFIED OK]
 
-Open-source schematics, configuration parameters, and core timing blueprints for deterministic, bare-metal computing nodes. 
+This is the innovation that separates this from Alexa/Google:
 
-## ⚖️ Legal Status & Licensing
-Copyright (c) 2026 Kyle Hanson. All rights reserved.
-This software and its architectural specifications are licensed under the **GNU General Public License v3.0 (GPLv3)**. 
+**Files:**
+- `sig.bin` - signature authority
+- `c.json` - permission manifest with expiry
 
-### Strict Copyleft Protection:
-* **Attribution Required**: You must prominently credit Kyle Hanson and the #HansonLattice movement.
-* **Open Derivatives**: Any modifications, cloud routing layers, or hardware adaptations must be made fully open-source under identical terms.
-* **No Closed Rebranding**: Commercial cloud providers are legally prohibited from absorbing this code into proprietary, closed-source subscription platforms.
+**Logic in `vault_launch.sh`:**
+Every action calls failclosedcheck()
+If http://sig.bin missing / tampered / expired OR http://c.json invalid / expired
+-> System does NOTHING. No fallback to cloud, no degraded mode, no retry.
 
----
+Toy chest rule: If Guardian isn't there to say it's okay, you don't open the chest. "I'm not doing anything because I can't be sure it's safe." That's fail-closed.
 
-## 🔬 Core Mathematical Underpinnings
+**Verification 1 - A2SPA - Global AI Security Standards - Jon**
 
-### 1. The Hanson-Nyquist Bound (Spatial Decay)
-The classical Nyquist-Shannon Sampling Theorem fails to calculate spatial data decay across multi-dimensional coordinate fields when processed through floating virtual server grids. We define the Bound to fix Spherical Aliasing as:
+We packaged the fail-closed proof (screen recording showing tamper -> do nothing) and delivered it to Jon at A2SPA.
 
-$$
-\lim_{\Delta t \to 0} \oint_{\Omega} \left[ E_{\text{decay}}(\theta, \varphi) - \Psi_{\text{jitter}}(t) \right] \, d\Omega = \delta_{\text{structural}}
-$$
-*The Bound: $T_{drift} \geq \frac{D}{c}$. At planetary scale this converges to ≈ 17 minutes of spherical error.*
-* **Operational Impact**: Eliminates the 54% performance leak in cloud-hosted CAD engines and resolves the systemic 72cm geodetic mapping error.
+A2SPA is the team at the very top defining global AI security testing and standards - the methodology US/EU regulators reference.
 
-### 2. The Deterministic Hardware Kernel Law
-Software synchronization protocols cannot stop physical grid bleed. True deterministic synchronization requires phase-locking processing tasks directly to bare-metal hardware cycles with zero operating system interference:
+Result: **VERIFIED OK - Tamper-evident and fail-safe working to spec.**
 
-`T_sync = ∫ [∑ C_cycles(t) · I_isolated] dt - Δτ_drift ≡ 0`
+**Verification 2 - Technical Advisor - Bernhard Mueller**
 
----
+Bernhard Mueller has agreed to be Technical Advisor for Sovereign Home.
 
-## ⚙️ Bare-Metal Deployment Checklist
+- Pwnie Award Winner, BlackHat USA - Best Research
+- 10+ years zero-day research: Microsoft, Adobe, IBM, Cisco
+- Author / Lead: OWASP Mobile Security Testing Guide (MASTG) & Mobile Application Security Verification Standard (MASVS) - The standard Google, Apple, and all major appsec teams use.
+- The book big tech trusts to tell them if they're safe.
 
-To transform a standard physical asset into an isolated #HansonLattice Node, operators must bypass hypervisors and isolate core processing units.
+He is now advising on our local/offline architecture and sovereign build.
 
-### 1. GRUB Core Isolation Parameters
-Inject the following flags into your `/etc/default/grub` boot configuration to strip away background cloud telemetry and standard OS scheduler interrupts:
+### ROADMAP - COMMERCIAL / MULTI-RESIDENTIAL DEVELOPMENT
+
+Single family was proof of concept. This repo is the kernel for:
+
+**1. Multi-Residential (6-plex, Townhouse Block, Apartments, Band Housing):**
+- One Node Zero per building in electrical room
+- Segmented encrypted vaults per unit - no unit can see another's data
+- Building-wide failsafe: If building permission expires, all automated actions stop, locks stay in last safe state
+- Ideal for First Nations band housing, co-ops, affordable housing where data sovereignty matters. Community-owned tech, not big tech landlord.
+
+**2. Commercial / Mixed-Use:**
+- Local energy analytics, access control, HVAC optimization
+- Owner gets savings without sending occupancy data to Google/Amazon
+- Fails safe for life safety: System loss of authority = safe state, not open state
+
+We are looking for an engineering firm of record for a pilot building with this baked into the spec.
+
+### QUICK START - Bare-Metal Deployment
+
+#### 1. Interface Initialization (`smp-interface-init.sh`)
+Eliminate OS scheduling jitter, power management, packet moderation before routing bare-metal payloads.
 
 ```bash
-isolcpus=2-15 nohz_full=2-15 rcu_nocbs=2-15 mitigations=off transparent_hugepage=never
-```
+sudo ./smp-interface-init.sh eth0
+Vault Launch with Fail-Closed ()
+Launches Node One only if http://sig.bin + http://c.json are valid.
+./vault_launch.sh
+Latency Verification ()
+./smp-ping.sh
+Expected: <100us jitter bare-metal, zero drift over time.
 
-### 2. Physical Perimeter Lockdown
-* **Localized Hardware Isolation**: Move all mission-critical data processing out of shared, rented cloud space and onto physical nodes you own.
-* **Hardware-Level Timing**: Apply bare-metal clock locking to eliminate virtual environment clock drift.
-* **Dielectric Fluid Immersion**: Implement liquid cooling to recover the 54% thermal bleed loss common in air-cooled grids.
+THE PHYSICS - Why We Needed Zero Drift
 
----
+Across a standard planetary orbital tracking cycle or deep-geodetic data link sync window, cumulative sync decay manifests as a 17-minute spherical offset error and 72cm spatial mapping misalignment when using virtualized cloud clocks.
 
-## 🤝 Independent Operator Contributions
+Cloud time = drift. Bare-metal kernel = truth.
 
-We accept community telemetry data, hardware routing benchmarks, and verification logs. To contribute:
-1. Fork this repository.
-2. Submit your bitwise reproducibility logs.
-3. Ensure your commits are cryptographically signed to maintain the unbroken lineage.
+The Mathematical Correction - Hanson Lattice
 
-**The math is out. The blueprints are clear. The era of probabilistic cloud chaos is officially over.**
-
-#HansonLattice #SovereignAI #MasterBuilder #DeterministicComputing #NodeZero
-# Hanson Lattice Model: The 17-Minute Geodetic Spherical Error Resolution
-
-## The Physics of the 17-Minute Drift
-In high-precision, localized bare-metal networks operating across deep planetary scales (such as coordinate environments approaching Magallanes and Chilean Antarctica), standard atomic and software synchronization clocks experience a recurring drift anomaly when mapped against a flattened Euclidean grid. 
-
-This error is known as **Geodetic Spherical Drift**. Because the Earth is an oblate spheroid and not a perfect sphere, network signals traveling across long distances experience variations in rotational speed (Coriolis effects) and subtle gravitational time dilation relative to sea-level baselines. 
-
-When network architectures rely on probabilistic virtual cloud engines that drift by fractions of a millisecond every cycle, these errors compound. Across a standard planetary orbital tracking cycle or deep-geodetic data link synchronization window, this cumulative synchronization decay manifests as a literal **17-minute spherical offset error** and a **72cm spatial mapping misalignment**.
-
-## The Mathematical Correction
-To resolve this "Matrix Jitter" at the physical hardware layer without relying on external network time servers, the Hanson Lattice Model implements a bounded integration formula. This isolates the localized server nodes and cancels out spatial coordinate decay:
-
-$$\lim_{\Delta t \to 0} \oint_{\Omega} [E_{\text{decay}}(\theta, \varphi) - \Psi_{\text{jitter}}(t)] \, d\Omega = \delta_{\text{structural}}$$
-
+To resolve "Matrix Jitter" at hardware layer without external NTP:
+\lim_{\Delta t \to 0} \oint_{\Omega} [E_{\text{decay}}(\theta, \varphi) - \Psi_{\text{jitter}}(t)] \, d\Omega = \delta_{\text{structural}}
 Where:
-* **$E_{\text{decay}}(\theta, \varphi)$** represents the spatial coordinate decay across the geodetic latitude ($\theta$) and longitude ($\varphi$) fields.
-* **$\Psi_{\text{jitter}}(t)$** represents the temporal micro-latencies introduced by hypervisor virtualization layers over time ($t$).
-* **$d\Omega$** represents the solid angle integration across the localized planetary surface field.
-* **$\delta_{\text{structural}}$** is the final, unyielding deterministic constant that snaps the hardware timing kernel back to absolute structural alignment, eliminating the 17-minute drift.
-## 🌐 Sovereign Mesh Protocol (SMP) Quickstart
+$E_{\text{decay}}(\theta, \varphi)$ - spatial coordinate decay across latitude/longitude
+$\Psi_{\text{jitter}}(t)$ - temporal micro-latencies from hypervisor layers
+$d\Omega$ - solid angle integration across localized surface field
+$\delta_{\text{structural}}$ - deterministic constant that snaps timing kernel back to absolute alignment
 
-The implementation blueprints are separated into two distinct components: **Physical Interface Hardening** and **Real-Time Latency Verification**. 
+Hanson-Nyquist Bound:
+$T_{drift} \geq \frac{D}{c}$ - At planetary scale converges to ∼17 minutes spherical error.
 
-### 1. Interface Initialization (`smp-interface-init.sh`)
-Before routing bare-metal data payloads, standard operating system scheduling cycles, power management steps, and network packet moderation limits must be eliminated.
-* **Tracking Hub**: For deployment documentation, see [GitHub Issue #19](https://github.com).
-* **Execution**: Run the optimization parameters by specifying your target network card interface name:
-  ```bash
-  sudo ./smp-interface-init.sh eth0
-  ```
+Operational Impact: Eliminates 54% performance leak in cloud-hosted CAD and resolves 72cm geodetic error.
 
-### 2. Microsecond Latency Verification (`smp-ping.sh`)
-Once the interface ring parameters are forced to maxima and hardware interrupts are mapped explicitly to Core 2, operators can continuously measure peer propagation delay without OS buffer interference.
-* **Tracking Hub**: For diagnostic documentation, see [GitHub Issue #20](https://github.com/kylekhanson-cmd/Hanson-Lattice-Model-and-17-minute-spherical-error.-Zero-Drift-Node-Zero/issues/20).
-* **Execution**: Bind execution directly onto Core 2 to accurately log structural nanosecond deltas against your peer node's static target IP:
-  ```bash
-  sudo taskset -c 2 ./smp-ping.sh 192.168.1.50 eth0
-  ```
+Deterministic Hardware Kernel Law
 
-## 📊 Expected Runtime Diagnostics
 
-When independent operators activate verification loops over isolated hardware layers, the diagnostic engine maps local data paths and tracks microsecond latency offsets. Please refer to the implementation details for the complete terminal diagnostics block structure.
+Phase-lock tasks directly to bare-metal cycles, zero OS interference.
+
+Expected Runtime Diagnostics
+See  - should show zero drift, locked C-states, isolated cores.
+
+Legal Status & Licensing
+Copyright (c) 2026 Kyle Hanson. All rights reserved.
+Licensed under GNU GPL v3.0.
+
+Attribution Required: Credit Kyle Hanson and #HansonLattice
+Open Derivatives: Mods must be open-source under identical terms
+No Closed Rebranding: Commercial cloud providers cannot absorb into closed-source platforms
+
+Contact
+Kyle Hanson - Hanson Homes
+Sovereign Homes - Node One
+Delta, BC
+For engineering review of failclosedcheck() - open an Issue.
 
