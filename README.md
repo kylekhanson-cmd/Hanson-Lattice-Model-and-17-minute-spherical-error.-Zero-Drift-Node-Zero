@@ -41,12 +41,9 @@ Result: **VERIFIED OK - Tamper-evident and fail-safe working to spec.**
 
 **Verification 2 - Technical Advisor - Bernhard Mueller**
 
-Bernhard Mueller has agreed to be Technical Advisor for Sovereign Home.
 
-- Pwnie Award Winner, BlackHat USA - Best Research
-- 10+ years zero-day research: Microsoft, Adobe, IBM, Cisco
-- Author / Lead: OWASP Mobile Security Testing Guide (MASTG) & Mobile Application Security Verification Standard (MASVS) - The standard Google, Apple, and all major appsec teams use.
-- The book big tech trusts to tell them if they're safe.
+
+
 
 He is now advising on our local/offline architecture and sovereign build.
 
