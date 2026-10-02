@@ -1,3 +1,44 @@
+# Hanson Lattice - Zero Drift Node Zero / Sovereign Home - Node One
+
+Sovereign data infrastructure that lives IN the building. No cloud. Fail-closed by design.
+
+This repo is the bare-metal kernel + failsafe logic for Node One - Phi3 Mini running 100% local, offline, encrypted.
+
+### What It Is
+- Local AI node for homes / multi-res / commercial - runs on a mini-PC in the electrical room.
+- Controls: locks, HVAC, lighting, energy, all on local network. Works with internet down.
+- No cloud for sacred - no data exfiltration. 
+- Core Law: Free to THINK, not free to ACT. Every action must pass fail-closed check.
+
+### Core Safety - Fail Closed Proof [VERIFIED OK]
+
+Logic in `/vault_launch.sh` and permission check:
+
+- Two files govern authority: `sig.bin` (signature) + `c.json` (permission manifest with expiry)
+- Every action calls `fail_closed_check()` 
+- If sig.bin missing / tampered / expired OR c.json invalid -> system does NOTHING. No fallback, no cloud call.
+- Toy chest rule: If Guardian isn't there, you don't open the chest.
+
+**Verification 1 - Global AI Security Standards Team (A2SPA - Jon)**
+We delivered screen-recorded proof of tamper -> do-nothing behavior to the team at the top defining global AI security standards. 
+Result: Verified OK - Tamper-evident and fail-safe to spec. This is the same standard US/EU regulators point to.
+
+**Verification 2 - Technical Advisor On Board**
+Pwnie Award Winner, BlackHat USA Best Research winner - author of OWASP MASTG/MASVS (the mobile security standard used by Google/Apple) - has agreed to be Technical Advisor for Sovereign Home architecture.
+
+This is now more than single family - we are designing for:
+- Multi-residential (6-plex / townhouse / band housing): One Node Zero per building, segmented encrypted vaults per unit.
+- Commercial / Mixed-use: Local energy + access + HVAC optimization with zero occupancy data sent to cloud. Fails safe: locks stay in last safe state.
+
+Repo contains:
+- `smp-interface-init.sh` - bare-metal NIC isolation
+- `vault_launch.sh` - Node launch with fail-closed check
+- `hl-lattice.log` - runtime diagnostics
+- Math below - 17-minute spherical error correction for zero-drift timing.
+
+---
+
+Existing Hanson Lattice Model math stays below this.
 # Hanson-Lattice-Model-and-17-minute-spherical-error.-Zero-Drift-Node-Zero
 # #HansonLattice: Sovereign Data Infrastructure & Real-Time Kernels 🧱
 ## ⚡ Quick Start: 7-Phase Bare-Metal Deployment Pipeline
