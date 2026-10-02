@@ -1,4 +1,3 @@
-Perfect - here's your full new README. Delete your old one, create new  and paste this whole thing in. This is built for Prima to open and instantly get it.
 # Hanson Lattice Model - Zero Drift Node Zero / Sovereign Home - Node One
 ### Sovereign Data Infrastructure & Fail-Closed AI for Buildings 🧱
 
