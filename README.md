@@ -23,14 +23,12 @@ Built for single family first, designed for multi-res and commercial.
 This is the innovation that separates this from Alexa/Google:
 
 **Files:**
-- `sig.bin` - signature authority
-- `c.json` - permission manifest with expiry
+- ``sig.bin`` - signature authority
+- ``c.json`` - permission manifest with expiry
 
-**Logic in `vault_launch.sh`:**
-Every action calls failclosedcheck()
-If http://sig.bin missing / tampered / expired OR http://c.json invalid / expired
+Logic in `vault_launch.sh`: Every action calls `fail_closed_check()` 
+If `sig.bin` missing / tampered / expired OR `c.json` invalid / expired 
 -> System does NOTHING. No fallback to cloud, no degraded mode, no retry.
-
 Toy chest rule: If Guardian isn't there to say it's okay, you don't open the chest. "I'm not doing anything because I can't be sure it's safe." That's fail-closed.
 
 **Verification 1 - A2SPA - Global AI Security Standards - Jon**
