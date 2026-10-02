@@ -31,21 +31,20 @@ If `sig.bin` missing / tampered / expired OR `c.json` invalid / expired
 -> System does NOTHING. No fallback to cloud, no degraded mode, no retry.
 Toy chest rule: If Guardian isn't there to say it's okay, you don't open the chest. "I'm not doing anything because I can't be sure it's safe." That's fail-closed.
 
-**Verification 1 - A2SPA - Global AI Security Standards - Jon**
 
-We packaged the fail-closed proof (screen recording showing tamper -> do nothing) and delivered it to Jon at A2SPA.
+### Verification 2 - Technical Advisor - [Under NDA Until Seed]
 
-A2SPA is the team at the very top defining global AI security testing and standards - the methodology US/EU regulators reference.
+- Technical Advisor on board for Sovereign Home architecture
+- Credentials: Pwnie Award Winner, BlackHat USA Best Research
+- Author / Lead: OWASP Mobile Security Testing Guide (MASTG) & Mobile App Security Verification Standard (MASVS) - The standard Google, Apple, and all major appsec teams use to test if they're safe.
+- 10+ years zero-day research: Microsoft, Adobe, IBM, Cisco
+- Name held under NDA until funding round closes to protect advisory relationship. Available for investor verification under NDA.
 
-Result: **VERIFIED OK - Tamper-evident and fail-safe working to spec.**
+### Verification 1 - Global AI Security Standards
 
-**Verification 2 - Technical Advisor - Bernhard Mueller**
-
-
-
-
-
-He is now advising on our local/offline architecture and sovereign build.
+- Fail-closed proof (screen recording: tamper -> do nothing) delivered to team defining global AI security testing standards - methodology US/EU regulators reference.
+- Result: VERIFIED OK - Tamper-evident and fail-safe working to spec.
+- Contact held under NDA.
 
 ### ROADMAP - COMMERCIAL / MULTI-RESIDENTIAL DEVELOPMENT
 
