@@ -1,7 +1,7 @@
 AGPL-3.0 + Commons Clause + Hardware Attribution Clause:
 - Anyone can use Zero Drift Node Zero for education / homes / non-commercial
 - If you use it in a commercial product / cloud service / vehicle / robot, you MUST open source your full stack that touches it and credit Hanson Lattice Society + Sovereign Super Intelligence
-- No closed-source derivative without a commercial license from Sovereign Super Intelligence (that's your business arm that funds the charity)
+- No closed-source derivative without a commercial license from Sovereign Super Intelligence
 # Hanson Lattice Model - Zero Drift Node Zero / Sovereign Home - Node One
 ### Sovereign Data Infrastructure & Fail-Closed AI for Buildings 🧱
 
